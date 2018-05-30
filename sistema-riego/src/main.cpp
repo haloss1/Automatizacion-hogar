@@ -20,15 +20,22 @@ void setup()
     lcd.begin(20, 4);
     dht.setup(2);
 
-    for (int i = 0; i < 3; i++)
-    {
+    
         lcd.backlight();
         delay(250);
+        lcd.setCursor(2, 1);
+        lcd.print("Sistema de riego");
+        lcd.setCursor(6, 2);
+        lcd.print("Andrew M");
+        delay(2500);
         lcd.noBacklight();
         delay(250);
-    }
+    
     lcd.backlight(); // finish with backlight on
-
+    lcd.setCursor(2, 1);
+        lcd.print("                 ");
+        lcd.setCursor(6, 2);
+        lcd.print("        ");
     lcd.setCursor(2, 0); //Start at character 0 on line 0
     lcd.print("Sistema de riego");
 
